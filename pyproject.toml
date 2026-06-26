@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crypto-agility"
+version = "0.1.0"
+description = "Cryptographic-agility provider: swap signature/KEM algorithms by id, hybrid (classical+PQC) fail-closed, anti-downgrade negotiation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ali Pourrahim" }]
+keywords = ["crypto-agility", "post-quantum", "pqc", "hybrid", "negotiation"]
+dependencies = ["cryptography>=42"]
+
+[tool.setuptools]
+packages = ["crypto_agility"]
