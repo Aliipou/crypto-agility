@@ -39,7 +39,13 @@ from .interfaces import (
     PROVIDER_API_VERSION,
 )
 from .registry import Registry, default_registry
-from .negotiation import negotiate, AlgorithmStrength
+from .negotiation import (
+    negotiate,
+    negotiate_authenticated,
+    sign_offer,
+    canonical_offer,
+    AlgorithmStrength,
+)
 from . import classical
 from . import pqc
 from . import hybrid
@@ -59,6 +65,9 @@ __all__ = [
     "Registry",
     "default_registry",
     "negotiate",
+    "negotiate_authenticated",
+    "sign_offer",
+    "canonical_offer",
     "AlgorithmStrength",
     "classical",
     "pqc",
