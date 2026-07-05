@@ -35,8 +35,8 @@ _STRENGTH = {
 def strength(alg_id: str) -> AlgorithmStrength:
     try:
         return _STRENGTH[alg_id]
-    except KeyError:
-        raise NegotiationError(f"unknown algorithm strength: {alg_id!r}")
+    except KeyError as e:
+        raise NegotiationError(f"unknown algorithm strength: {alg_id!r}") from e
 
 
 def negotiate(local_offered, peer_offered, floor: AlgorithmStrength = AlgorithmStrength.CLASSICAL) -> str:

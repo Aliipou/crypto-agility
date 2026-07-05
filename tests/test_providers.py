@@ -1,7 +1,6 @@
 import unittest
 
 from crypto_agility import (
-    AlgorithmStrength,
     NotImplementedAlgorithmError,
     UnknownAlgorithmError,
     default_registry,

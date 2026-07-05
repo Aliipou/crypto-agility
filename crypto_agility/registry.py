@@ -20,14 +20,14 @@ class Registry:
     def signature(self, alg_id: str):
         try:
             return self._sig[alg_id]
-        except KeyError:
-            raise UnknownAlgorithmError(f"no signature provider for alg_id {alg_id!r}")
+        except KeyError as e:
+            raise UnknownAlgorithmError(f"no signature provider for alg_id {alg_id!r}") from e
 
     def kem(self, alg_id: str):
         try:
             return self._kem[alg_id]
-        except KeyError:
-            raise UnknownAlgorithmError(f"no KEM provider for alg_id {alg_id!r}")
+        except KeyError as e:
+            raise UnknownAlgorithmError(f"no KEM provider for alg_id {alg_id!r}") from e
 
     def signature_algorithms(self) -> tuple[str, ...]:
         return tuple(self._sig)

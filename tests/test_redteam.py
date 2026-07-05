@@ -11,10 +11,10 @@ from crypto_agility import (
     sign_offer,
 )
 from crypto_agility.classical import Ed25519SignatureProvider
+from crypto_agility.errors import NotImplementedAlgorithmError, VerificationError
 from crypto_agility.hybrid import HybridSignatureProvider, _pack, _unpack
 from crypto_agility.interfaces import SignatureKeyPair
 from crypto_agility.pqc import MLDSA65SignatureProvider
-from crypto_agility.errors import NotImplementedAlgorithmError, VerificationError
 
 
 class _MockPqcSig:
